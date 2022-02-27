@@ -171,8 +171,8 @@ npm run dev
 Go to http://localhost:3000/ to view the application.
 
 
-## Add data to the website
+## Add data to the application
 
-Add data to through Django Admin.
+Add data through Django Admin.
 
 Go to http://127.0.0.1:8000/admin to access the Django Admin interface and sign in using the admin credentials.
