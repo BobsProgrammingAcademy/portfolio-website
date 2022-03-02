@@ -89,7 +89,10 @@ From the **backend** directory run:
 touch config/.env
 ```
 
-Declare environment variables in the **.env** file. Make sure you don't use quotation marks around the strings.
+The **touch** command will create the **.env** file in the **backend/config** directory. This command works on Mac and Linux but not on Windows. If you are a Windows user, instead of using the command line, you can create the **.env** file manually by navigating in Visual Studio Code to the Explorer, clicking on the **config** directory (inside the **backend** directory), and selecting the option **New File**.
+
+
+Next, declare environment variables in the **.env** file. Make sure you don't use quotation marks around the strings.
 
 ```bash
 SECRET_KEY=yoursecretkey
@@ -139,7 +142,9 @@ From the **frontend** directory run:
 touch .env.development && touch .env.production
 ```
 
-Declare environment variables in the **.env.development** file. Make sure you don't use quotation marks around the strings.
+The **touch** command will create the **.env.development** and **.env.production** files in the **frontend** directory. This command works on Mac and Linux but not on Windows. If you are a Windows user, instead of using the command line, you can create the **.env.development** and **.env.production** files manually by navigating in Visual Studio Code to the Explorer, clicking on the **frontend** directory, and selecting the option **New File**.
+
+Next, declare environment variables in the **.env.development** file. Make sure you don't use quotation marks around the strings.
 
 ```bash
 BACKEND_HOST=127.0.0.1
