@@ -11,6 +11,13 @@ This is a portfolio website built using **Django 3.2**, **Next.js 12**, and **Ma
 ![plot](https://github.com/BobsProgrammingAcademy/Portfolio-Website/blob/main/frontend/public/images/light_theme.png?raw=true)
 
 
+## Table of Contents 
+- [Prerequisites](#prerequisites)
+- [Installation](#installation)
+- [Running the application](#run-the-application)
+- [Adding data to the application](#add-data-to-the-application)
+
+
 ## Prerequisites
 
 Install the following prerequisites:
