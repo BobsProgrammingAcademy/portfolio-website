@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import PropTypes from 'prop-types';
 import AOS from 'aos';
 import Head from 'next/head';
@@ -17,24 +17,28 @@ import Layout from '../layout/Layout';
 const clientSideEmotionCache = createEmotionCache();
 
 const App = ({ Component, pageProps, emotionCache = clientSideEmotionCache }) => {
-    const [mode, setMode] = React.useState('dark');
-    const colorMode = React.useMemo(
+    const [mode, setMode] = useState('dark');
+    const colorMode = useMemo(
         () => ({
-            // The light mode switch will invoke this method
+            // The theme mode switch will invoke this method
             toggleColorMode: () => {
+                window.localStorage.setItem('themeMode', mode === 'dark' ? 'light' : 'dark');
                 setMode((prevMode) => (prevMode === 'dark' ? 'light' : 'dark'));
-
-                try {
-                    window.localStorage.setItem('themeMode', mode);
-                } catch {
-                    /* do nothing */
-                }
             },
         }), 
-        [],
+        [mode],
     );
 
-    React.useEffect(() => {
+    useEffect(() => {
+        try {
+            const localTheme = window.localStorage.getItem('themeMode');
+            localTheme ? setMode(localTheme) : setMode('dark');
+        } catch {
+            setMode('dark');
+        }
+    }, []);
+
+    useEffect(() => {
         // Remove the server-side injected CSS
         const jssStyles = document.querySelector('#jss-server-side');
         if (jssStyles) {
