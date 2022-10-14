@@ -44,7 +44,6 @@ const Header = ({ onSidebarOpen }) => {
         <React.Fragment>
             <AppBar
                 position='sticky'
-                color='transparent'
                 elevation={theme.palette.mode === 'dark' ? (0) : (trigger ? 1 : 0)}
                 sx={{
                     top: 0,
