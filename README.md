@@ -16,6 +16,7 @@ This is a portfolio website built using **Django 3.2**, **Next.js 12**, and **Ma
 - [Installation](#installation)
 - [Running the application](#run-the-application)
 - [Adding data to the application](#add-data-to-the-application)
+- [Copyright and License](#copyright-and-license)
 
 
 ## Prerequisites
@@ -202,3 +203,7 @@ Go to http://localhost:3000/ to view the application.
 Add data through Django Admin.
 
 Go to http://127.0.0.1:8000/admin to access the Django Admin interface and sign in using the admin credentials.
+
+## Copyright and License
+
+Copyright © 2022 Bob's Programming Academy. Code released under the MIT license.
