@@ -16,6 +16,7 @@ This is a portfolio website built using **Django 3**, **Django REST Framework 3*
 - [Installation](#installation)
 - [Running the application](#run-the-application)
 - [Adding data to the application](#add-data-to-the-application)
+- [Customizing the application](#customize-the-application)
 - [Copyright and License](#copyright-and-license)
 
 
@@ -203,6 +204,42 @@ Go to http://localhost:3000/ to view the application.
 Add data through Django Admin.
 
 Go to http://127.0.0.1:8000/admin to access the Django Admin interface and sign in using the admin credentials.
+
+
+## Customize the application
+
+This section describes how to customize the application. 
+
+### Changing Section Titles and Subtitles 
+
+#### 1. About
+
+To modify the title and subtitle of the **About** section, make changes in the ```frontend/src/components/About.js``` file.
+
+#### 2. Projects
+
+To modify the title and subtitle of the **Projects** section, make changes in the ```frontend/src/components/Projects.js``` file.
+
+#### 3. Technologies
+
+To modify the title and subtitle of the **Technologies** section, make changes in the ```frontend/src/components/Technologies.js``` file.
+
+#### 4. Contact
+
+To modify the title and subtitle of the **Contact** section, make changes in the ```frontend/src/components/Contact.js``` file.
+
+### Changing Colors
+
+To modify the colors in the application, make changes in the ```frontend/src/theme/theme.js``` file.
+
+### Changing Fonts
+
+To modify the fonts in the application, first, add a new font to the ```frontend/src/pages/_document.js``` file, and then make changes in the ```frontend/src/theme/typography.js``` file.
+
+### Changing Logo
+
+To modify the logo in the application, make changes in the ```frontend/src/layout/Header.js``` and ```frontend/src/layout/Sidebar.js``` files.
+
 
 ## Copyright and License
 
