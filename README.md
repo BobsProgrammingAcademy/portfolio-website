@@ -240,6 +240,18 @@ To modify the fonts in the application, first, add a new font to the ```frontend
 
 To modify the logo in the application, make changes in the ```frontend/src/layout/Header.js``` and ```frontend/src/layout/Sidebar.js``` files.
 
+### Changing the Image in the Hero Section
+
+To modify the image in the Hero section, make changes in the ```frontend/src/components/Hero.js``` and ```frontend/src/layout/Footer.js``` files.
+
+### Changing the Text in the Hero Section
+
+To modify the text in the Hero section, make changes in the ```frontend/src/components/Hero.js``` file.
+
+### Changing Buttons in the Hero Section
+
+To modify the two buttons in the Hero section, make changes in the ```frontend/src/components/HeroButtons.js``` file.
+
 
 ## Copyright and License
 
