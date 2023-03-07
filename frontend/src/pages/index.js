@@ -7,15 +7,15 @@ import Projects from '../components/Projects';
 import Technologies from '../components/Technologies';
 
 const Home = () => {
-    return (
-        <div id='home'>
-            <Hero />
-            <About />
-            <Projects />
-            <Technologies />
-            <Contact />
-        </div>
-    );
+  return (
+    <div id='home'>
+      <Hero />
+      <About />
+      <Projects />
+      <Technologies />
+      <Contact />
+    </div>
+  );
 };
 
 export default Home;
