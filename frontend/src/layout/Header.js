@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 import AppBar from '@mui/material/AppBar';
 import Avatar from '@mui/material/Avatar';
@@ -33,180 +33,180 @@ import ColorModeContext from '../components/ColorModeContext';
 import CustomButton from '../components/CustomButton';
 
 const Header = ({ onSidebarOpen }) => {
-    const theme = useTheme();
-    const colorMode = React.useContext(ColorModeContext);
-    const trigger = useScrollTrigger({
-        disableHysteresis: true,
-        threshold: 38,
-    });
+  const theme = useTheme();
+  const colorMode = useContext(ColorModeContext);
+  const trigger = useScrollTrigger({
+    disableHysteresis: true,
+    threshold: 38,
+  });
 
-    return (
-        <React.Fragment>
-            <AppBar
-                position='sticky'
-                elevation={theme.palette.mode === 'dark' ? (0) : (trigger ? 1 : 0)}
-                sx={{
-                    top: 0,
-                    border: 0,
-                    backgroundColor: trigger ? theme.palette.background.default : 'transparent',
-                }}
+  return (
+    <>
+      <AppBar
+        position='sticky'
+        elevation={theme.palette.mode === 'dark' ? (0) : (trigger ? 1 : 0)}
+        sx={{
+          top: 0,
+          border: 0,
+          backgroundColor: trigger ? theme.palette.background.default : 'transparent',
+        }}
+      >
+        <Toolbar sx={{ minHeight: 70 }}>
+          <Box 
+            alignItems='center'
+            sx={{ display: { md: 'block', lg: 'none' } }}
+          >
+            <Button
+              onClick={() => onSidebarOpen()}
+              aria-label='Menu'
+              variant='outlined'
+              sx={{
+                borderRadius: 2,
+                minWidth: 'auto',
+                padding: 1,
+                color: theme.palette.primary.main,
+                borderColor: alpha(theme.palette.primary.main, 0.2),
+              }}
             >
-                <Toolbar sx={{ minHeight: 70 }}>
-                    <Box 
-                        alignItems='center'
-                        sx={{ display: { md: 'block', lg: 'none' } }}
-                    >
-                        <Button
-                            onClick={() => onSidebarOpen()}
-                            aria-label='Menu'
-                            variant='outlined'
-                            sx={{
-                                borderRadius: 2,
-                                minWidth: 'auto',
-                                padding: 1,
-                                color: theme.palette.primary.main,
-                                borderColor: alpha(theme.palette.primary.main, 0.2),
-                            }}
-                        >
-                            <MenuIcon fontSize='medium' />
-                        </Button>
-                    </Box>
-                    <Link href='/' style={{ textDecoration: 'none' }}>
-                        <IconButton size='large' disabled>
-                            <Avatar
-                                variant='rounded'
-                                sx={{
-                                    backgroundColor: theme.palette.primary.main,
-                                    height: 52,
-                                    width: 52,
-                                    marginRight: '15px'
-                                }}
-                            >
-                                <FontAwesomeIcon 
-                                    icon={faGraduationCap} 
-                                    style={{ 
-                                        color: theme.palette.common.white, 
-                                        height: 30, 
-                                        width: 30 
-                                    }} 
-                                />
-                            </Avatar>
-                            <Typography 
-                                variant='h3' 
-                                component='div' 
-                                sx={{ 
-                                    flexGrow: 1,
-                                    color: theme.palette.text.primary,
-                                    fontFamily: '"Love Ya Like A Sister", cursive',
-                                    fontWeight: 'bold',
-                                    textDecoration: 'none',
-                                    display: { md: 'inline', xs: 'none' }
-                                }}
-                            >
-                                Bob's Programming Academy
-                            </Typography>
-                        </IconButton>
-                    </Link>
-                    <Box sx={{ flexGrow: 1 }} />
-                    <Box 
-                        sx={{ 
-                            alignItems: 'center',
-                            display: { lg: 'flex', md: 'none', xs: 'none' } 
-                        }}
-                    >
-                        <CustomButton 
-                            href='#home'
-                            icon={<HomeIcon />}
-                            text='Home'
-                        />
-                        <CustomButton 
-                            href='#about'
-                            icon={<InfoIcon />}
-                            text='About'
-                        />
-                        <CustomButton 
-                            href='#projects'
-                            icon={<ListIcon />}
-                            text='Projects'
-                        />
-                        <CustomButton 
-                            href='#technologies'
-                            icon={<DevicesIcon />}
-                            text='Technologies'
-                        />
-                        <CustomButton 
-                            href='#contact'
-                            icon={<EmailIcon />}
-                            text='Contact'
-                        />
-                    </Box>
-                    <Divider
-                        orientation='vertical'
-                        sx={{ 
-                            height: 32, 
-                            mx: 2,
-                            display: { lg: 'flex', md: 'none', xs: 'none' }
-                        }} 
-                    />
-                    <Box sx={{ display: 'flex' }}>
-                        <IconButton
-                            onClick={colorMode.toggleColorMode}
-                            aria-label='Theme Mode'
-                            color={theme.palette.mode === 'dark' ? 'warning' : 'inherit' }
-                        >
-                            {theme.palette.mode === 'dark' 
-                                ? (
-                                    <LightModeIcon fontSize='medium' />
-                                ) 
-                                : (
-                                    <DarkModeIcon fontSize='medium' />
-                                )
-                            }
-                        </IconButton>
-                    </Box>
-                    <Divider
-                        orientation='vertical'
-                        sx={{ 
-                            height: 32, 
-                            mx: 2,
-                            display: { lg: 'flex', md: 'none', xs: 'none' } 
-                        }} 
-                    />
-                    <Box sx={{ display: { lg: 'flex', md: 'none', xs: 'none' } }}>
-                        <IconButton 
-                            aria-label='YouTube' 
-                            color='primary'
-                            href='#'
-                            target='_blank'
-                        >
-                            <YouTubeIcon fontSize='large' />
-                        </IconButton>
-                        <IconButton 
-                            aria-label='LinkedIn' 
-                            color='primary'
-                            href='#'
-                            target='_blank'
-                        >
-                            <LinkedInIcon fontSize='large' />
-                        </IconButton>
-                        <IconButton 
-                            aria-label='Instagram' 
-                            color='primary'
-                            href='#'
-                            target='_blank'
-                        >
-                            <InstagramIcon fontSize='large' />
-                        </IconButton>
-                    </Box>
-                    {theme.palette.mode === 'dark' && <Divider />}
-                </Toolbar>
-            </AppBar>
-        </React.Fragment>
-    );
+              <MenuIcon fontSize='medium' />
+            </Button>
+          </Box>
+          <Link href='/' style={{ textDecoration: 'none' }}>
+            <IconButton size='large' disabled>
+              <Avatar
+                variant='rounded'
+                sx={{
+                  backgroundColor: theme.palette.primary.main,
+                  height: 52,
+                  width: 52,
+                  marginRight: '15px'
+                }}
+              >
+                <FontAwesomeIcon 
+                  icon={faGraduationCap} 
+                  style={{ 
+                    color: theme.palette.common.white, 
+                    height: 30, 
+                    width: 30 
+                  }} 
+                />
+              </Avatar>
+              <Typography 
+                variant='h3' 
+                component='div' 
+                sx={{ 
+                  flexGrow: 1,
+                  color: theme.palette.text.primary,
+                  fontFamily: '"Love Ya Like A Sister", cursive',
+                  fontWeight: 'bold',
+                  textDecoration: 'none',
+                  display: { md: 'inline', xs: 'none' }
+                }}
+              >
+                Bob's Programming Academy
+              </Typography>
+            </IconButton>
+          </Link>
+          <Box sx={{ flexGrow: 1 }} />
+          <Box 
+            sx={{ 
+              alignItems: 'center',
+              display: { lg: 'flex', md: 'none', xs: 'none' } 
+            }}
+          >
+            <CustomButton 
+              href='#home'
+              icon={<HomeIcon />}
+              text='Home'
+            />
+            <CustomButton 
+              href='#about'
+              icon={<InfoIcon />}
+              text='About'
+            />
+            <CustomButton 
+              href='#projects'
+              icon={<ListIcon />}
+              text='Projects'
+            />
+            <CustomButton 
+              href='#technologies'
+              icon={<DevicesIcon />}
+              text='Technologies'
+            />
+            <CustomButton 
+              href='#contact'
+              icon={<EmailIcon />}
+              text='Contact'
+            />
+          </Box>
+          <Divider
+            orientation='vertical'
+            sx={{ 
+              height: 32, 
+              mx: 2,
+              display: { lg: 'flex', md: 'none', xs: 'none' }
+            }} 
+          />
+          <Box sx={{ display: 'flex' }}>
+            <IconButton
+              onClick={colorMode.toggleColorMode}
+              aria-label='Theme Mode'
+              color={theme.palette.mode === 'dark' ? 'warning' : 'inherit' }
+            >
+              {theme.palette.mode === 'dark' 
+                ? (
+                  <LightModeIcon fontSize='medium' />
+                ) 
+                : (
+                  <DarkModeIcon fontSize='medium' />
+                )
+              }
+            </IconButton>
+          </Box>
+          <Divider
+            orientation='vertical'
+            sx={{ 
+              height: 32, 
+              mx: 2,
+              display: { lg: 'flex', md: 'none', xs: 'none' } 
+            }} 
+          />
+          <Box sx={{ display: { lg: 'flex', md: 'none', xs: 'none' } }}>
+            <IconButton 
+              aria-label='YouTube' 
+              color='primary'
+              href='#'
+              target='_blank'
+            >
+              <YouTubeIcon fontSize='large' />
+            </IconButton>
+            <IconButton 
+              aria-label='LinkedIn' 
+              color='primary'
+              href='#'
+              target='_blank'
+            >
+              <LinkedInIcon fontSize='large' />
+            </IconButton>
+            <IconButton 
+              aria-label='Instagram' 
+              color='primary'
+              href='#'
+              target='_blank'
+            >
+              <InstagramIcon fontSize='large' />
+            </IconButton>
+          </Box>
+          {theme.palette.mode === 'dark' && <Divider />}
+        </Toolbar>
+      </AppBar>
+    </>
+  );
 };
 
 Header.propTypes = {
-    onSidebarOpen: PropTypes.func,
+  onSidebarOpen: PropTypes.func,
 };
 
 export default Header;
