@@ -14,6 +14,7 @@ env:
   DATABASE_USER: postgres
   DATABASE_PASS: postgres
   DATABASE_HOST: localhost
+  FRONTEND_URL: http://localhost:3000
 
 jobs:
   build:
