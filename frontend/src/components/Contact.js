@@ -17,36 +17,35 @@ const Contact = () => {
   const [contact, setContact] = useState([]);
 
   const fetchContact = () => {
-    axios.get('/contact', {
-      headers: {
-        'Accept': 'application/json',
-        'Access-Control-Allow-Origin': process.env.BACKEND_URL,
-      }
-    })
-    .then(response => {
-      setContact(response.data);
-    })
-    .catch(err => console.log(err));
+    axios
+      .get('/contact', {
+        headers: {
+          Accept: 'application/json',
+          'Access-Control-Allow-Origin': process.env.BACKEND_URL,
+        },
+      })
+      .then((response) => {
+        setContact(response.data);
+      })
+      .catch((err) => console.log(err));
   };
 
   useEffect(() => {
     fetchContact();
   }, []);
 
-  const Map = useMemo(() => dynamic(
-    () => import('./Map'),
-    { 
-      loading: () => <p>A map is loading...</p>,
-      ssr: false
-    }
-  ), []);
+  const Map = useMemo(
+    () =>
+      dynamic(() => import('./Map'), {
+        loading: () => <p>A map is loading...</p>,
+        ssr: false,
+      }),
+    []
+  );
 
   return (
     <div id='contact'>
-      <Box 
-        position='relative'
-        marginBottom={15}
-      >
+      <Box position='relative' marginBottom={15}>
         <Box
           maxWidth={{ sm: 720, md: 1236 }}
           width={1}
@@ -80,10 +79,7 @@ const Contact = () => {
           {contact.map((item, i) => (
             <Box key={i}>
               <Box marginBottom={4}>
-                <Map 
-                  coordinates={[item.latitude, item.longitude]} 
-                  zoom={13} 
-                />
+                <Map coordinates={[item.latitude, item.longitude]} zoom={13} />
               </Box>
               <Box
                 display='flex'
@@ -113,10 +109,7 @@ const Contact = () => {
                       <EmailIcon fontSize='small' />
                     </Box>
                   </Box>
-                  <ListItemText 
-                    primary='Email'
-                    secondary={item.email}
-                  />
+                  <ListItemText primary='Email' secondary={item.email} />
                 </Box>
                 <Box
                   component={ListItem}
@@ -138,10 +131,7 @@ const Contact = () => {
                       <LocationIcon fontSize='small' />
                     </Box>
                   </Box>
-                  <ListItemText 
-                    primary='Location'
-                    secondary={item.address} 
-                  />
+                  <ListItemText primary='Location' secondary={item.address} />
                 </Box>
               </Box>
             </Box>

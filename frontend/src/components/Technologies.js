@@ -16,16 +16,17 @@ const Technologies = () => {
   const [technologies, setTechnologies] = useState([]);
 
   const fetchTechnologies = () => {
-    axios.get('/technologies', {
-      headers: {
-        'Accept': 'application/json',
-        'Access-Control-Allow-Origin': process.env.BACKEND_URL,
-      }
-    })
-    .then(response => {
-      setTechnologies(response.data);
-    })
-    .catch(err => console.log(err));
+    axios
+      .get('/technologies', {
+        headers: {
+          Accept: 'application/json',
+          'Access-Control-Allow-Origin': process.env.BACKEND_URL,
+        },
+      })
+      .then((response) => {
+        setTechnologies(response.data);
+      })
+      .catch((err) => console.log(err));
   };
 
   useEffect(() => {
@@ -103,10 +104,10 @@ const Technologies = () => {
                         variant='rounded'
                         borderRadius={2}
                       >
-                        <Image src={item.icon} height={50} width={50} /> 
+                        <Image src={item.icon} height={50} width={50} />
                       </Box>
                     </Box>
-                    <Typography 
+                    <Typography
                       align='center'
                       color={theme.palette.text.primary}
                       fontWeight='bold'

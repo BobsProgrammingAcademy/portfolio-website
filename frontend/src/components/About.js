@@ -12,22 +12,23 @@ import { useTheme } from '@mui/material/styles';
 
 const About = () => {
   const theme = useTheme();
-  
+
   const [about, setAbout] = useState([]);
-  
+
   const fetchAbout = () => {
-    axios.get('/about', {
-      headers: {
-        'Accept': 'application/json',
-        'Access-Control-Allow-Origin': process.env.BACKEND_URL,
-      }
-    })
-    .then(response => {
-      setAbout(response.data);
-    })
-    .catch(err => console.log(err));
+    axios
+      .get('/about', {
+        headers: {
+          Accept: 'application/json',
+          'Access-Control-Allow-Origin': process.env.BACKEND_URL,
+        },
+      })
+      .then((response) => {
+        setAbout(response.data);
+      })
+      .catch((err) => console.log(err));
   };
-  
+
   useEffect(() => {
     fetchAbout();
   }, []);
@@ -61,7 +62,8 @@ const About = () => {
               marginTop={4}
               marginBottom={6}
             >
-              We help software developers learn new skills, gain more experience and create excellent applications.
+              We help software developers learn new skills, gain more experience
+              and create excellent applications.
             </Typography>
           </Box>
           <Grid container spacing={4}>
@@ -77,9 +79,7 @@ const About = () => {
                 >
                   <ListItemAvatar>
                     <Box color={theme.palette.primary.main}>
-                      <Icon sx={{ fontSize: '40px' }}>
-                        {item.icon}
-                      </Icon>
+                      <Icon sx={{ fontSize: '40px' }}>{item.icon}</Icon>
                     </Box>
                   </ListItemAvatar>
                   <ListItemText

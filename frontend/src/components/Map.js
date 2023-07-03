@@ -18,10 +18,10 @@ const Map = ({ coordinates, zoom }) => {
   }, [map]);
 
   return (
-    <MapContainer 
-      center={position} 
-      zoom={zoom} 
-      scrollWheelZoom={false} 
+    <MapContainer
+      center={position}
+      zoom={zoom}
+      scrollWheelZoom={false}
       whenCreated={setMap}
       style={{ height: '400px', width: '100%' }}
     >
@@ -29,11 +29,7 @@ const Map = ({ coordinates, zoom }) => {
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
       />
-      <Circle 
-        center={position} 
-        pathOptions={fillBlueOptions} 
-        radius={50} 
-      />
+      <Circle center={position} pathOptions={fillBlueOptions} radius={50} />
     </MapContainer>
   );
 };

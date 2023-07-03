@@ -15,28 +15,27 @@ import Sidebar from './Sidebar';
 
 const Layout = ({ children }) => {
   const theme = useTheme();
-  const isLg = useMediaQuery(
-    theme.breakpoints.up('lg'),
-    { defaultMatches: true }
-  );
+  const isLg = useMediaQuery(theme.breakpoints.up('lg'), {
+    defaultMatches: true,
+  });
 
   const [openSidebar, setOpenSidebar] = useState(false);
-    
+
   const handleSidebarOpen = () => {
     setOpenSidebar(true);
   };
-    
+
   const handleSidebarClose = () => {
     setOpenSidebar(false);
   };
-    
+
   const open = isLg ? false : openSidebar;
 
   const trigger = useScrollTrigger({
     disableHysteresis: true,
     threshold: 100,
   });
-    
+
   const scrollTo = (id) => {
     setTimeout(() => {
       const element = document.querySelector(`#${id}`);
@@ -50,13 +49,8 @@ const Layout = ({ children }) => {
   return (
     <Box id='page-top'>
       <Header onSidebarOpen={handleSidebarOpen} />
-      <Sidebar
-        onClose={handleSidebarClose}
-        open={open}
-      />
-      <Box>
-        {children}
-      </Box>
+      <Sidebar onClose={handleSidebarClose} open={open} />
+      <Box>{children}</Box>
       <Footer />
       <NoSsr>
         <Zoom in={trigger}>
@@ -65,9 +59,9 @@ const Layout = ({ children }) => {
             role='presentation'
             sx={{ position: 'fixed', bottom: 24, right: 32 }}
           >
-            <Fab 
-              color='primary' 
-              size='small' 
+            <Fab
+              color='primary'
+              size='small'
               aria-label='scroll back to top'
               sx={{
                 '&:hover': {
@@ -87,7 +81,7 @@ const Layout = ({ children }) => {
 };
 
 Layout.propTypes = {
-  children: PropTypes.node
+  children: PropTypes.node,
 };
 
 export default Layout;

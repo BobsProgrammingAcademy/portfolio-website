@@ -19,22 +19,23 @@ const Projects = () => {
   const [projects, setProjects] = useState([]);
 
   const fetchProjects = () => {
-    axios.get('/projects', {
-      headers: {
-        'Accept': 'application/json',
-        'Access-Control-Allow-Origin': process.env.BACKEND_URL,
-      }
-    })
-    .then(response => {
-      setProjects(response.data);
-    })
-    .catch(err => console.log(err));
+    axios
+      .get('/projects', {
+        headers: {
+          Accept: 'application/json',
+          'Access-Control-Allow-Origin': process.env.BACKEND_URL,
+        },
+      })
+      .then((response) => {
+        setProjects(response.data);
+      })
+      .catch((err) => console.log(err));
   };
 
   useEffect(() => {
     fetchProjects();
   }, []);
-    
+
   return (
     <div id='projects'>
       <Box
@@ -85,8 +86,8 @@ const Projects = () => {
                 sx={{
                   transition: 'all .2s ease-in-out',
                   '&:hover': {
-                    transform: `translateY(-${theme.spacing(1 / 2)})`
-                  }
+                    transform: `translateY(-${theme.spacing(1 / 2)})`,
+                  },
                 }}
               >
                 <Box
@@ -160,11 +161,11 @@ const Projects = () => {
                     >
                       <Box marginTop={2}>
                         {item.tags.map((tag, i) => (
-                          <Chip 
+                          <Chip
                             key={i}
-                            label={tag.name} 
+                            label={tag.name}
                             variant='outlined'
-                            sx={{ m: 1}}
+                            sx={{ m: 1 }}
                           />
                         ))}
                       </Box>
@@ -172,7 +173,7 @@ const Projects = () => {
                   </CardContent>
                   <Box flexGrow={1} />
                   <CardActions sx={{ justifyContent: 'flex-end' }}>
-                    <Button 
+                    <Button
                       component='a'
                       href={item.link}
                       target='_blank'
@@ -191,5 +192,5 @@ const Projects = () => {
     </div>
   );
 };
-  
+
 export default Projects;

@@ -12,7 +12,7 @@ import { useTheme } from '@mui/material/styles';
 
 const Footer = () => {
   const theme = useTheme();
-  
+
   return (
     <>
       <Box
@@ -38,13 +38,13 @@ const Footer = () => {
                   sx={{
                     display: 'flex',
                     flexDirection: 'row',
-                    padding: 0
+                    padding: 0,
                   }}
                 >
                   <ListItemButton component='a' href='#'>
-                    <ListItemText 
+                    <ListItemText
                       primary={
-                        <Typography 
+                        <Typography
                           variant='body2'
                           color={theme.palette.text.secondary}
                         >
@@ -54,9 +54,9 @@ const Footer = () => {
                     />
                   </ListItemButton>
                   <ListItemButton component='a' href='#'>
-                    <ListItemText 
+                    <ListItemText
                       primary={
-                        <Typography 
+                        <Typography
                           variant='body2'
                           color={theme.palette.text.secondary}
                         >
@@ -71,13 +71,14 @@ const Footer = () => {
             <Grid container item xs={12} md={4} justifyContent='center'>
               <List>
                 <ListItemButton>
-                  <ListItemText 
+                  <ListItemText
                     primary={
-                      <Typography 
+                      <Typography
                         variant='body2'
                         color={theme.palette.text.secondary}
                       >
-                        Copyright &copy; {new Date().getFullYear()} Bob's Programming Academy.
+                        Copyright &copy; {new Date().getFullYear()} Bob's
+                        Programming Academy.
                       </Typography>
                     }
                   />
@@ -87,14 +88,13 @@ const Footer = () => {
             <Grid container item xs={12} md={4} justifyContent='center'>
               <List>
                 <ListItemButton>
-                  <ListItemText 
+                  <ListItemText
                     primary={
-                      <Typography 
+                      <Typography
                         variant='body2'
                         color={theme.palette.text.secondary}
                       >
-                        Photo by
-                        {' '}
+                        Photo by{' '}
                         <Link
                           href='https://pixabay.com/users/marlyneart-15261801'
                           alt='Martine Auvray'
@@ -103,11 +103,9 @@ const Footer = () => {
                           color={theme.palette.text.secondary}
                         >
                           Martine Auvray
-                        </Link>
-                        {' '}
-                        on
-                        {' '} 
-                        <Link 
+                        </Link>{' '}
+                        on{' '}
+                        <Link
                           href='https://pixabay.com/photos/dog-containment-telework-bichon-4977599/'
                           alt='Pixabay'
                           target='_blank'
@@ -115,7 +113,8 @@ const Footer = () => {
                           color={theme.palette.text.secondary}
                         >
                           Pixabay
-                        </Link>.
+                        </Link>
+                        .
                       </Typography>
                     }
                   />

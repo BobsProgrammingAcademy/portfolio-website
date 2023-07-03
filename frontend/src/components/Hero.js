@@ -11,10 +11,9 @@ import HeroButtons from './HeroButtons';
 
 const Hero = () => {
   const theme = useTheme();
-  const isMd = useMediaQuery(
-    theme.breakpoints.up('md'),
-    { defaultMatches: true }
-  );
+  const isMd = useMediaQuery(theme.breakpoints.up('md'), {
+    defaultMatches: true,
+  });
 
   return (
     <div id='home'>
@@ -60,7 +59,10 @@ const Hero = () => {
                       color={theme.palette.text.secondary}
                       align='justify'
                     >
-                      In Bob's Programming Academy, we help both aspiring and established software developers gain more experience, take their skills to the next level and create excellent applications.
+                      In Bob's Programming Academy, we help both aspiring and
+                      established software developers gain more experience, take
+                      their skills to the next level and create excellent
+                      applications.
                     </Typography>
                   </Box>
                   <HeroButtons />
@@ -72,21 +74,21 @@ const Hero = () => {
                 flex: { xs: '0 0 100%', md: '0 0 50%' },
                 position: 'relative',
                 maxWidth: { xs: '100%', md: '50%' },
-                order: { xs: 1, md: 2 }
+                order: { xs: 1, md: 2 },
               }}
             >
               <Box
                 sx={{
                   width: { xs: 1, md: '50vw' },
                   height: '100%',
-                  position: 'relative'
+                  position: 'relative',
                 }}
               >
                 <Box
                   sx={{
                     width: '100%',
                     height: '100%',
-                    overflow: 'hidden'
+                    overflow: 'hidden',
                   }}
                 >
                   <Box
@@ -118,7 +120,7 @@ const Hero = () => {
                         },
                       }}
                     >
-                      <Box 
+                      <Box
                         component={LazyLoadImage}
                         src='/images/bg.jpg'
                         alt='Background Image'
@@ -135,9 +137,9 @@ const Hero = () => {
             </Box>
           </Box>
         </Container>
-        <Divider sx={{ mt: 3}} />
+        <Divider sx={{ mt: 3 }} />
       </Box>
-    </div>     
+    </div>
   );
 };
 

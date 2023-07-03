@@ -44,15 +44,17 @@ const Header = ({ onSidebarOpen }) => {
     <>
       <AppBar
         position='sticky'
-        elevation={theme.palette.mode === 'dark' ? (0) : (trigger ? 1 : 0)}
+        elevation={theme.palette.mode === 'dark' ? 0 : trigger ? 1 : 0}
         sx={{
           top: 0,
           border: 0,
-          backgroundColor: trigger ? theme.palette.background.default : 'transparent',
+          backgroundColor: trigger
+            ? theme.palette.background.default
+            : 'transparent',
         }}
       >
         <Toolbar sx={{ minHeight: 70 }}>
-          <Box 
+          <Box
             alignItems='center'
             sx={{ display: { md: 'block', lg: 'none' } }}
           >
@@ -79,28 +81,28 @@ const Header = ({ onSidebarOpen }) => {
                   backgroundColor: theme.palette.primary.main,
                   height: 52,
                   width: 52,
-                  marginRight: '15px'
+                  marginRight: '15px',
                 }}
               >
-                <FontAwesomeIcon 
-                  icon={faGraduationCap} 
-                  style={{ 
-                    color: theme.palette.common.white, 
-                    height: 30, 
-                    width: 30 
-                  }} 
+                <FontAwesomeIcon
+                  icon={faGraduationCap}
+                  style={{
+                    color: theme.palette.common.white,
+                    height: 30,
+                    width: 30,
+                  }}
                 />
               </Avatar>
-              <Typography 
-                variant='h3' 
-                component='div' 
-                sx={{ 
+              <Typography
+                variant='h3'
+                component='div'
+                sx={{
                   flexGrow: 1,
                   color: theme.palette.text.primary,
                   fontFamily: '"Love Ya Like A Sister", cursive',
                   fontWeight: 'bold',
                   textDecoration: 'none',
-                  display: { md: 'inline', xs: 'none' }
+                  display: { md: 'inline', xs: 'none' },
                 }}
               >
                 Bob's Programming Academy
@@ -108,89 +110,77 @@ const Header = ({ onSidebarOpen }) => {
             </IconButton>
           </Link>
           <Box sx={{ flexGrow: 1 }} />
-          <Box 
-            sx={{ 
+          <Box
+            sx={{
               alignItems: 'center',
-              display: { lg: 'flex', md: 'none', xs: 'none' } 
+              display: { lg: 'flex', md: 'none', xs: 'none' },
             }}
           >
-            <CustomButton 
-              href='#home'
-              icon={<HomeIcon />}
-              text='Home'
-            />
-            <CustomButton 
-              href='#about'
-              icon={<InfoIcon />}
-              text='About'
-            />
-            <CustomButton 
+            <CustomButton href='#home' icon={<HomeIcon />} text='Home' />
+            <CustomButton href='#about' icon={<InfoIcon />} text='About' />
+            <CustomButton
               href='#projects'
               icon={<ListIcon />}
               text='Projects'
             />
-            <CustomButton 
+            <CustomButton
               href='#technologies'
               icon={<DevicesIcon />}
               text='Technologies'
             />
-            <CustomButton 
-              href='#contact'
-              icon={<EmailIcon />}
-              text='Contact'
-            />
+            <CustomButton href='#contact' icon={<EmailIcon />} text='Contact' />
           </Box>
           <Divider
             orientation='vertical'
-            sx={{ 
-              height: 32, 
+            sx={{
+              height: 32,
               mx: 2,
-              display: { lg: 'flex', md: 'none', xs: 'none' }
-            }} 
+              display: { lg: 'flex', md: 'none', xs: 'none' },
+            }}
           />
           <Box sx={{ display: 'flex' }}>
             <IconButton
               onClick={colorMode.toggleColorMode}
               aria-label='Theme Mode'
-              color={theme.palette.mode === 'dark' ? 'warning' : 'inherit' }
+              color={theme.palette.mode === 'dark' ? 'warning' : 'inherit'}
             >
-              {theme.palette.mode === 'dark' 
-                ? (
-                  <LightModeIcon fontSize='medium' />
-                ) 
-                : (
-                  <DarkModeIcon fontSize='medium' />
-                )
-              }
+              {theme.palette.mode === 'dark' ? (
+                <LightModeIcon fontSize='medium' />
+              ) : (
+                <DarkModeIcon
+                  fontSize='medium'
+                  sx={{ color: theme.palette.text.primary }}
+                />
+              )}
             </IconButton>
           </Box>
           <Divider
             orientation='vertical'
-            sx={{ 
-              height: 32, 
+            sx={{
+              height: 32,
               mx: 2,
-              display: { lg: 'flex', md: 'none', xs: 'none' } 
-            }} 
+              display: { lg: 'flex', md: 'none', xs: 'none' },
+            }}
           />
           <Box sx={{ display: { lg: 'flex', md: 'none', xs: 'none' } }}>
-            <IconButton 
-              aria-label='YouTube' 
+            <IconButton
+              aria-label='YouTube'
               color='primary'
               href='#'
               target='_blank'
             >
               <YouTubeIcon fontSize='large' />
             </IconButton>
-            <IconButton 
-              aria-label='LinkedIn' 
+            <IconButton
+              aria-label='LinkedIn'
               color='primary'
               href='#'
               target='_blank'
             >
               <LinkedInIcon fontSize='large' />
             </IconButton>
-            <IconButton 
-              aria-label='Instagram' 
+            <IconButton
+              aria-label='Instagram'
               color='primary'
               href='#'
               target='_blank'

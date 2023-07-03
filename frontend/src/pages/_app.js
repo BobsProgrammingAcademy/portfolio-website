@@ -16,19 +16,26 @@ import Layout from '../layout/Layout';
 // Client-side cache, shared for the whole session of the user in the browser
 const clientSideEmotionCache = createEmotionCache();
 
-const App = ({ Component, pageProps, emotionCache = clientSideEmotionCache }) => {
+const App = ({
+  Component,
+  pageProps,
+  emotionCache = clientSideEmotionCache,
+}) => {
   const [mode, setMode] = useState('dark');
   const colorMode = useMemo(
     () => ({
       // The theme mode switch will invoke this method
       toggleColorMode: () => {
-        window.localStorage.setItem('themeMode', mode === 'dark' ? 'light' : 'dark');
+        window.localStorage.setItem(
+          'themeMode',
+          mode === 'dark' ? 'light' : 'dark'
+        );
         setMode((prevMode) => (prevMode === 'dark' ? 'light' : 'dark'));
       },
-    }), 
-    [mode],
+    }),
+    [mode]
   );
-  
+
   useEffect(() => {
     try {
       const localTheme = window.localStorage.getItem('themeMode');
@@ -58,9 +65,15 @@ const App = ({ Component, pageProps, emotionCache = clientSideEmotionCache }) =>
     <CacheProvider value={emotionCache}>
       <Head>
         <meta charSet='utf-8' />
-        <meta content='minimum-scale=1, initial-scale=1, width=device-width' name='viewport' />
+        <meta
+          content='minimum-scale=1, initial-scale=1, width=device-width'
+          name='viewport'
+        />
         <meta name='description' content="Bob's Programming Academy" />
-        <meta name='keywords' content='programming, python, javascript, portfolio, website' />
+        <meta
+          name='keywords'
+          content='programming, python, javascript, portfolio, website'
+        />
         <title>Bob's Programming Academy</title>
       </Head>
       <ColorModeContext.Provider value={colorMode}>

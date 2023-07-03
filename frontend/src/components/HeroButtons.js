@@ -8,11 +8,10 @@ import ManageSearchIcon from '@mui/icons-material/ManageSearchOutlined';
 
 const HeroButtons = () => {
   const theme = useTheme();
-  const isMd = useMediaQuery(
-    theme.breakpoints.up('md'),
-    { defaultMatches: true }
-  );
-    
+  const isMd = useMediaQuery(theme.breakpoints.up('md'), {
+    defaultMatches: true,
+  });
+
   return (
     <>
       <Box
@@ -40,8 +39,8 @@ const HeroButtons = () => {
             '&:hover': {
               backgroundColor: 'transparent',
               color: theme.palette.primary.main,
-              border: '2px solid ' + theme.palette.primary.main
-            }
+              border: '2px solid ' + theme.palette.primary.main,
+            },
           }}
         >
           Learn More
@@ -69,8 +68,8 @@ const HeroButtons = () => {
               '&:hover': {
                 backgroundColor: theme.palette.primary.main,
                 color: theme.palette.common.white,
-                border: '2px solid ' + theme.palette.primary.main
-              }
+                border: '2px solid ' + theme.palette.primary.main,
+              },
             }}
           >
             View Our Work
