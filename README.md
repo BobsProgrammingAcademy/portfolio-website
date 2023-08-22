@@ -1,6 +1,6 @@
 # Portfolio Website
 
-This is a portfolio website built using **Django 3**, **Django REST Framework 3**, **Next.js 12**, and **Material UI 5** that uses a **PostgreSQL** database to store data.
+This is a portfolio website built using **Django 4**, **Django REST Framework 3**, **Next.js 12**, and **Material UI 5** that uses a **PostgreSQL** database to store data.
 
 ### Dark mode:
 
@@ -10,15 +10,14 @@ This is a portfolio website built using **Django 3**, **Django REST Framework 3*
 
 ![plot](https://github.com/BobsProgrammingAcademy/Portfolio-Website/blob/main/frontend/public/images/light_theme.png?raw=true)
 
+## Table of Contents
 
-## Table of Contents 
 - [Prerequisites](#prerequisites)
 - [Installation](#installation)
 - [Running the application](#run-the-application)
 - [Adding data to the application](#add-data-to-the-application)
 - [Customizing the application](#customize-the-application)
 - [Copyright and License](#copyright-and-license)
-
 
 ### Prerequisites
 
@@ -28,7 +27,6 @@ Install the following prerequisites:
 2. [Node.js](https://nodejs.org/en/)
 3. [PostgreSQL](https://www.postgresql.org/download/)
 4. [Visual Studio Code](https://code.visualstudio.com/download)
-
 
 ### Installation
 
@@ -41,6 +39,7 @@ From the **root** directory run:
 ```bash
 cd backend
 ```
+
 ```bash
 python -m venv venv
 ```
@@ -129,6 +128,7 @@ From the **backend** directory run:
 ```bash
 python manage.py makemigrations
 ```
+
 ```bash
 python manage.py migrate
 ```
@@ -152,6 +152,7 @@ From the **root** directory run:
 ```bash
 cd frontend
 ```
+
 ```bash
 npm install
 ```
@@ -205,49 +206,49 @@ Go to http://127.0.0.1:8000/admin to access the Django Admin interface and sign 
 
 ### Customize the application
 
-This section describes how to customize the application. 
+This section describes how to customize the application.
 
-#### Changing Section Titles and Subtitles 
+#### Changing Section Titles and Subtitles
 
 #### 1. About
 
-To modify the title and subtitle of the **About** section, make changes in the ```frontend/src/components/About.js``` file.
+To modify the title and subtitle of the **About** section, make changes in the `frontend/src/components/About.js` file.
 
 #### 2. Projects
 
-To modify the title and subtitle of the **Projects** section, make changes in the ```frontend/src/components/Projects.js``` file.
+To modify the title and subtitle of the **Projects** section, make changes in the `frontend/src/components/Projects.js` file.
 
 #### 3. Technologies
 
-To modify the title and subtitle of the **Technologies** section, make changes in the ```frontend/src/components/Technologies.js``` file.
+To modify the title and subtitle of the **Technologies** section, make changes in the `frontend/src/components/Technologies.js` file.
 
 #### 4. Contact
 
-To modify the title and subtitle of the **Contact** section, make changes in the ```frontend/src/components/Contact.js``` file.
+To modify the title and subtitle of the **Contact** section, make changes in the `frontend/src/components/Contact.js` file.
 
 #### Changing Colors
 
-To modify the colors in the application, make changes in the ```frontend/src/theme/theme.js``` file.
+To modify the colors in the application, make changes in the `frontend/src/theme/theme.js` file.
 
 #### Changing Fonts
 
-To modify the fonts in the application, first, add a new font to the ```frontend/src/pages/_document.js``` file, and then make changes in the ```frontend/src/theme/typography.js``` file.
+To modify the fonts in the application, first, add a new font to the `frontend/src/pages/_document.js` file, and then make changes in the `frontend/src/theme/typography.js` file.
 
 #### Changing Logo
 
-To modify the logo in the application, make changes in the ```frontend/src/layout/Header.js``` and ```frontend/src/layout/Sidebar.js``` files.
+To modify the logo in the application, make changes in the `frontend/src/layout/Header.js` and `frontend/src/layout/Sidebar.js` files.
 
 #### Changing the Image in the Hero Section
 
-To modify the image in the Hero section, make changes in the ```frontend/src/components/Hero.js``` and ```frontend/src/layout/Footer.js``` files.
+To modify the image in the Hero section, make changes in the `frontend/src/components/Hero.js` and `frontend/src/layout/Footer.js` files.
 
 #### Changing the Text in the Hero Section
 
-To modify the text in the Hero section, make changes in the ```frontend/src/components/Hero.js``` file.
+To modify the text in the Hero section, make changes in the `frontend/src/components/Hero.js` file.
 
 #### Changing Buttons in the Hero Section
 
-To modify the two buttons in the Hero section, make changes in the ```frontend/src/components/HeroButtons.js``` file.
+To modify the two buttons in the Hero section, make changes in the `frontend/src/components/HeroButtons.js` file.
 
 ### Copyright and License
 
