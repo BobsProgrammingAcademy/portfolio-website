@@ -1,6 +1,6 @@
 # Portfolio Website
 
-This is a portfolio website built using **Django 4**, **Django REST Framework 3**, **Next.js 12**, and **Material UI 5** that uses a **PostgreSQL** database to store data.
+This is a portfolio website built using **Django 4**, **Django REST Framework 3**, **Next.js 13**, and **Material UI 5** that uses a **PostgreSQL** database to store data.
 
 ### Dark mode:
 
