@@ -3,7 +3,6 @@
 This is a portfolio website built using **Django 4**, **Django REST Framework 3**, **Next.js 13**, and **Material UI 5**. The app uses a **PostgreSQL** database to store data.
 
 
-
 ### Dark mode:
 
 ![plot](https://github.com/BobsProgrammingAcademy/Portfolio-Website/blob/main/frontend/public/images/dark_theme.png?raw=true)
@@ -12,14 +11,17 @@ This is a portfolio website built using **Django 4**, **Django REST Framework 3*
 
 ![plot](https://github.com/BobsProgrammingAcademy/Portfolio-Website/blob/main/frontend/public/images/light_theme.png?raw=true)
 
+
 ## Table of Contents
 
 - [Prerequisites](#prerequisites)
 - [Installation](#installation)
 - [Running the application](#run-the-application)
+- [Running the tests](#run-the-tests)
 - [Adding data to the application](#add-data-to-the-application)
 - [Customizing the application](#customize-the-application)
 - [Copyright and License](#copyright-and-license)
+
 
 ### Prerequisites
 
@@ -30,6 +32,7 @@ Install the following prerequisites:
 2. [Node.js](https://nodejs.org/en/)
 3. [PostgreSQL](https://www.postgresql.org/download/)
 4. [Visual Studio Code](https://code.visualstudio.com/download)
+
 
 ### Installation
 
@@ -177,6 +180,7 @@ BACKEND_HOST=127.0.0.1
 BACKEND_URL=http://127.0.0.1:8000
 ```
 
+
 ### Run the application
 
 To run the application, you need to have both the backend and the frontend up and running.
@@ -201,11 +205,25 @@ npm run dev
 
 Go to http://localhost:3000/ to view the application.
 
+
+### Run the tests
+
+#### 1. Run the backend tests
+
+From the **backend** directory, run:
+
+```bash
+python manage.py test --pattern="tests.py"
+
+```
+
+
 ### Add data to the application
 
 Add data through Django Admin.
 
 Go to http://127.0.0.1:8000/admin to access the Django Admin interface and sign in using the admin credentials.
+
 
 ### Customize the application
 
@@ -252,6 +270,7 @@ To modify the text in the Hero section, make changes in the `frontend/src/compon
 #### Changing Buttons in the Hero Section
 
 To modify the two buttons in the Hero section, make changes in the `frontend/src/components/HeroButtons.js` file.
+
 
 ### Copyright and License
 
