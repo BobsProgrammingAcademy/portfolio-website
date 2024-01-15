@@ -165,7 +165,7 @@ const Projects = () => {
                             key={i}
                             label={tag.name}
                             variant='outlined'
-                            sx={{ m: 1 }}
+                            sx={{ margin: 1 }}
                           />
                         ))}
                       </Box>
