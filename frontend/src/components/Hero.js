@@ -49,7 +49,7 @@ const Hero = () => {
                       align='center'
                       marginBottom={3}
                     >
-                      Bob's Programming Academy
+                      Bob&apos;s Programming Academy
                     </Typography>
                   </Box>
                   <Box marginBottom={3}>
@@ -59,9 +59,9 @@ const Hero = () => {
                       color={theme.palette.text.secondary}
                       align='justify'
                     >
-                      In Bob's Programming Academy, we help both aspiring and
-                      established software developers gain more experience, take
-                      their skills to the next level and create excellent
+                      In Bob&apos;s Programming Academy, we help both aspiring
+                      and established software developers gain more experience,
+                      take their skills to the next level and create excellent
                       applications.
                     </Typography>
                   </Box>
@@ -137,7 +137,7 @@ const Hero = () => {
             </Box>
           </Box>
         </Container>
-        <Divider sx={{ mt: 3 }} />
+        <Divider sx={{ marginTop: 3 }} />
       </Box>
     </div>
   );
