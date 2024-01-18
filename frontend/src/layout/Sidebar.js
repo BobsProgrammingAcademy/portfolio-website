@@ -44,7 +44,7 @@ const Sidebar = ({ open, onClose }) => {
       >
         <Box sx={{ height: '100%', padding: 1 }}>
           <Box width={1} paddingX={2} paddingY={1}>
-            <Link href='/' style={{ textDecoration: 'none' }}>
+            <Link href='/' style={{ textDecoration: 'none' }} passHref>
               <IconButton size='large' disabled>
                 <Avatar
                   variant='rounded'
@@ -73,7 +73,7 @@ const Sidebar = ({ open, onClose }) => {
                   textDecoration='none'
                   flexGrow={1}
                 >
-                  Bob's Programming Academy
+                  Bob&apos;s Programming Academy
                 </Typography>
               </IconButton>
             </Link>
