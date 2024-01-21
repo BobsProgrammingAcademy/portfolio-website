@@ -27,7 +27,7 @@ const Contact = () => {
       .then((response) => {
         setContact(response.data);
       })
-      .catch((err) => console.log(err));
+      .catch((error) => console.log(error));
   };
 
   useEffect(() => {
