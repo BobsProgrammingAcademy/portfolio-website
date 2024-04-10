@@ -60,8 +60,8 @@ const Contact = () => {
               align='center'
               fontWeight={700}
               marginTop={theme.spacing(1)}
-              data-aos='fade-up'
               gutterBottom
+              data-aos='fade-up'
             >
               Get in touch
             </Typography>
@@ -69,9 +69,9 @@ const Contact = () => {
               variant='h6'
               align='center'
               color={theme.palette.text.secondary}
-              data-aos='fade-up'
               marginTop={4}
               marginBottom={6}
+              data-aos='fade-up'
             >
               We would love to hear from you
             </Typography>
