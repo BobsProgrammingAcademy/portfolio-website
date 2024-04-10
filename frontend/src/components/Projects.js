@@ -60,9 +60,9 @@ const Projects = () => {
             variant='h6'
             color={theme.palette.text.secondary}
             align='center'
-            data-aos='fade-up'
             marginTop={4}
             marginBottom={6}
+            data-aos='fade-up'
           >
             View some of our latest projects
           </Typography>
