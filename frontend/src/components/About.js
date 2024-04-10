@@ -49,8 +49,8 @@ const About = () => {
               align='center'
               fontWeight={700}
               marginTop={theme.spacing(1)}
-              data-aos='fade-up'
               gutterBottom
+              data-aos='fade-up'
             >
               About us
             </Typography>
@@ -58,9 +58,9 @@ const About = () => {
               variant='h6'
               color={theme.palette.text.secondary}
               align='center'
-              data-aos='fade-up'
               marginTop={4}
               marginBottom={6}
+              data-aos='fade-up'
             >
               We help software developers learn new skills, gain more experience
               and create excellent applications.
