@@ -50,9 +50,9 @@ const Projects = () => {
             variant='h3'
             align='center'
             fontWeight={700}
-            marginTop={theme.spacing(1)}
-            data-aos='fade-up'
+            marginTop={theme.spacing(1)}     
             gutterBottom
+            data-aos='fade-up'
           >
             Projects
           </Typography>
@@ -141,9 +141,9 @@ const Projects = () => {
                   <CardContent>
                     <Typography
                       variant='h6'
-                      gutterBottom
                       align='left'
                       fontWeight={700}
+                      gutterBottom
                     >
                       {item.name}
                     </Typography>
