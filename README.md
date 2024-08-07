@@ -3,7 +3,7 @@
 This is a portfolio website built using **Django 4**, **Django REST Framework 3**, **Next.js 13**, and **Material UI 5**. The app uses a **PostgreSQL** database to store data.
 
 
-## Dark mode:
+### Dark mode:
 
 ![plot](https://github.com/BobsProgrammingAcademy/Portfolio-Website/blob/main/frontend/public/images/dark_theme.png?raw=true)
 
@@ -12,7 +12,7 @@ This is a portfolio website built using **Django 4**, **Django REST Framework 3*
 ![plot](https://github.com/BobsProgrammingAcademy/Portfolio-Website/blob/main/frontend/public/images/light_theme.png?raw=true)
 
 
-## Table of Contents
+### Table of Contents
 
 - [Prerequisites](#prerequisites)
 - [Installation](#installation)
