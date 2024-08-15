@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import axios from 'axios';
 import dynamic from 'next/dynamic';
 import Avatar from '@mui/material/Avatar';
