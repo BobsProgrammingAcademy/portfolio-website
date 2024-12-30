@@ -7,6 +7,8 @@ import IconButton from '@mui/material/IconButton';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import { useTheme } from '@mui/material/styles';
+
+// Material Icons
 import DevicesIcon from '@mui/icons-material/Devices';
 import EmailIcon from '@mui/icons-material/EmailOutlined';
 import HomeIcon from '@mui/icons-material/HomeOutlined';
