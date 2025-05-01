@@ -1,15 +1,20 @@
 import { useState, useEffect, useMemo } from 'react';
 import axios from 'axios';
 import dynamic from 'next/dynamic';
+
+// Material UI
 import Avatar from '@mui/material/Avatar';
 import Box from '@mui/material/Box';
 import ListItem from '@mui/material/ListItem';
 import ListItemAvatar from '@mui/material/ListItemAvatar';
 import ListItemText from '@mui/material/ListItemText';
 import Typography from '@mui/material/Typography';
+import { useTheme } from '@mui/material/styles';
+
+// Material Icons
 import EmailIcon from '@mui/icons-material/Email';
 import LocationIcon from '@mui/icons-material/LocationOn';
-import { useTheme } from '@mui/material/styles';
+
 
 const Contact = () => {
   const theme = useTheme();
