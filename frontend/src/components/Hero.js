@@ -1,4 +1,6 @@
 import { LazyLoadImage } from 'react-lazy-load-image-component';
+
+// Material UI
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import Divider from '@mui/material/Divider';
