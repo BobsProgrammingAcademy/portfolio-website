@@ -1,6 +1,8 @@
 import 'leaflet/dist/leaflet.css';
 import { MapContainer, Circle, TileLayer } from 'react-leaflet';
 import { useState, useEffect } from 'react';
+
+// Material UI
 import { useTheme } from '@mui/material/styles';
 
 const Map = ({ coordinates, zoom }) => {
