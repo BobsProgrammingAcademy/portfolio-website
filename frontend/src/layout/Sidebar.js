@@ -26,6 +26,7 @@ import { faGraduationCap } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 library.add(faGraduationCap);
 
+// Components
 import CustomButton from '../components/CustomButton';
 
 const Sidebar = ({ open, onClose }) => {
