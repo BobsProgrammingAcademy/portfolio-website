@@ -11,6 +11,7 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
 import { useTheme } from '@mui/material/styles';
 
+// Components
 import Header from './Header';
 import Footer from './Footer';
 import Sidebar from './Sidebar';
