@@ -1,5 +1,7 @@
 // Material UI
 import { createTheme } from '@mui/material/styles';
+
+// Components
 import typography from './typography';
 
 export default {
